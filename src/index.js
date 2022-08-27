@@ -1,17 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import ReactDOM from 'react-dom';
+// // import './index.css';
+// // import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const AppHeader = () => {
+  return (
+    <div>
+      <h1>My Todo List</h1>
+    </div>
+  )
+}
+
+const SearchPanel = () => {
+  return (
+    <React.Fragment>
+      <input placeholder='search' />
+    </React.Fragment>)
+}
+
+const TodoList = () => {
+  return (
+    <div>
+      <AppHeader />
+      <SearchPanel />
+      <ul>
+        <li>Learn React</li>
+        <li>Build Aewsome App</li>
+      </ul>
+      {console.log('Todo List App')}
+    </div>
+  )
+};
+
+root.render(
+  // <AppHeader />
+  // <SearchPanel />
+  <TodoList />
+);
