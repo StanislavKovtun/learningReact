@@ -1,13 +1,12 @@
 import React from "react";
-const SearchPanel = ({searchText}) => {
-  
-  const searchStyle = {
-    fontSize: '20px'
-  };
+import './SearchPanel.css';
 
+const SearchPanel = ({searchText}) => {
   return (
     <React.Fragment>
-      <input style = {searchStyle} placeholder={searchText} />
+      <input type='text'
+      className="search-input"
+      placeholder={searchText} />
     </React.Fragment>)
 };
 
